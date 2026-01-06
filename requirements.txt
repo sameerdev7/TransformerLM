@@ -1,0 +1,12 @@
+torch 
+numpy 
+regex 
+
+datasets 
+
+pyyaml 
+
+tqdm 
+psutil 
+
+matplotlib
