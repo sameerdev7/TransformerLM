@@ -10,8 +10,8 @@ class MultiHeadSelfAttention(nn.Module):
     
     def __init__(self, d_model, num_heads, device=None, dtype=None):
         super().__init__()
-        self.d_model = d_model
-        self.num_heads = num_heads
+        self.d_model = d_model # embedding dimension
+        self.num_heads = num_heads # number of parallel attention heads
         
         assert d_model % num_heads == 0
         self.d_k = d_model // num_heads

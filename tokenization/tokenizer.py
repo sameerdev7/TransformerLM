@@ -2,6 +2,7 @@
 
 import regex as re
 
+# Splits text into linguistically meaningful chunks 
 GPT2_SPLIT_PATTERN = r"""'(?:[sdmt]|ll|ve|re)| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+"""
 
 
@@ -9,6 +10,7 @@ class Tokenizer:
     """BPE Tokenizer."""
     
     def __init__(self, vocab, merges, special_tokens=None):
+        # Used copy to prevent accidental mutation
         self.vocab = vocab.copy()
         self.merges = merges.copy()
         self.special_tokens = special_tokens or []
