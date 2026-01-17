@@ -37,7 +37,7 @@ This project implements a GPT-style Transformer language model with:
 
 **Experiment Tracking**: [View on W&B →](https://wandb.ai/sameer7sayyad-siddhant-college-of-engg/tinystories-gpt/runs/sghwrfsg)
 
-## 🏗️ Architecture
+## Architecture
 
 ### Model Configuration
 
