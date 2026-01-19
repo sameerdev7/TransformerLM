@@ -12,6 +12,10 @@ This project implements a GPT-style Transformer language model with:
 - **Multi-Head Self-Attention** with causal masking
 - **Complete Training Pipeline** with Weights & Biases integration
 
+### UI-Interface 
+
+![User Interface](assets/transformerlm.png)
+
 ## Model Performance
 
 ### Training Metrics
