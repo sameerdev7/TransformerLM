@@ -1,6 +1,10 @@
 import streamlit as st
+import os
 import requests
 import time
+
+
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 
 # Page Configuration
 st.set_page_config(
@@ -31,7 +35,7 @@ st.caption("Generate structured creative narratives using a Transformer model tr
 # API Health Check
 def check_api_health():
     try:
-        response = requests.get("http://localhost:8000/health", timeout=2)
+        response = requests.get(f"{API_URL}/health", timeout=2)
         return response.status_code == 200
     except:
         return False
@@ -122,7 +126,7 @@ if generate_button:
         try:
             with st.spinner("Processing..."):
                 response = requests.post(
-                    "http://localhost:8000/generate",
+                    f"{API_URL}/generate",
                     json={
                         "prompt": prompt,
                         "max_tokens": max_tokens,
